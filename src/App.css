@@ -34,10 +34,9 @@ body{
   a{
     text-decoration: none;
   }
-  /* @media  screen and  (max-width:576px) {
-
-    .customize{
-      flex-direction: column;
-    }
+  .a{
+    background-color: orange;
   }
-   */
+  .b{
+    background-color: white;
+  }

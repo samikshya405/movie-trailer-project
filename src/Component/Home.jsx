@@ -100,11 +100,15 @@ function Home() {
      <h3>Trending</h3>
      
      <ButtonGroup aria-label="Basic example" >
-      <Button variant="warning px-4" onClick={()=>{
+      <Button variant=" px-4 a" onClick={()=>{
         setTime_window("day")
+        document.querySelector('.a').style.background ="orange"
+        document.querySelector('.b').style.background ="white"
       }}>Day</Button>
-      <Button variant="info px-4" onClick={()=>{
+      <Button variant=" px-4 b" onClick={()=>{
         setTime_window("week")
+        document.querySelector('.b').style.background ="orange"
+        document.querySelector('.a').style.background ="white"
       }}>Week</Button>
       
     </ButtonGroup>
