@@ -19,13 +19,16 @@ function MoviePage() {
   // const searchTvUrl = `https://api.themoviedb.org/3/tv/${id}?api_key=${api_key}`
   const movieVideoUrl = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${api_key}`
   const [showTrailer, setShowTrailer] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
 
   const fetchmedia = async () => {
+    setIsLoading(true)
     const response = await fetch(searchMovieurl);
     const data = await response.json();
 
     setMovieDetail(data);
+    setIsLoading(false)
     
     
   };
@@ -59,7 +62,9 @@ function MoviePage() {
  
   return (
     <div className="container-lg h">
-      <div className="d-flex gap-5 mt-5 customize ">
+      {
+        !isLoading &&(
+          <div className="d-flex gap-5 mt-5 customize ">
         <div className="poster">
         
           {movieDetail.poster_path ? (
@@ -138,6 +143,9 @@ function MoviePage() {
           <hr/>
         </div>
       </div>
+
+        )
+      }
 
       
      <SimilarMovie id={id}/>
