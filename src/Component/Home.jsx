@@ -8,6 +8,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import '../App.css';
 import SwiperComponent from './SwiperComponent';
 import { Button, ButtonGroup } from 'react-bootstrap';
+import SearchForm from './SearchForm';
 
 
 function Home() {
@@ -94,8 +95,9 @@ function Home() {
 
   return (
     <>
+    <SearchForm/>
       <div className='d-flex justify-content-between p-3'>
-     <h1>Trending</h1>
+     <h3>Trending</h3>
      
      <ButtonGroup aria-label="Basic example" >
       <Button variant="warning px-4" onClick={()=>{
@@ -109,9 +111,9 @@ function Home() {
     </div>
      <SwiperComponent movie = {movie}/>
      <div className='d-flex justify-content-between p-3'>
-     <h1>What's Popular</h1>
+     <h3>What's Popular</h3>
      
-     <ButtonGroup aria-label="Basic example" >
+     {/* <ButtonGroup aria-label="Basic example" >
       <Button variant="warning px-4" onClick={()=>{
         setChoice("movie")
       }}>Movie</Button>
@@ -119,13 +121,13 @@ function Home() {
         setChoice("tv")
       }}>TV Shows</Button>
       
-    </ButtonGroup>
+    </ButtonGroup> */}
     </div>
      <SwiperComponent movie = {popular}/>
      <div className='d-flex justify-content-between p-3'>
-     <h1>Top Rated</h1>
+     <h3>Top Rated</h3>
      
-     <ButtonGroup aria-label="Basic example" >
+     {/* <ButtonGroup aria-label="Basic example" >
       <Button variant="warning px-4" onClick={()=>{
         setTopRated_choice("movie")
       }}>Movie</Button>
@@ -134,18 +136,18 @@ function Home() {
         console.log(topRated)
       }}>TV Shows</Button>
       
-    </ButtonGroup>
+    </ButtonGroup> */}
     </div>
      <SwiperComponent movie = {topRated}/>
 
      <div className='d-flex justify-content-between p-3'>
-     <h1>Now in Cinema</h1>
+     <h3>Now in Cinema</h3>
      
     
     </div>
      <SwiperComponent movie = {cinema}/>
      <div className='d-flex justify-content-between p-3'>
-     <h1>Upcoming</h1>
+     <h3>Upcoming</h3>
      
     
     </div>
