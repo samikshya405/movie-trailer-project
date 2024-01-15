@@ -16,7 +16,7 @@ function MoviePage() {
   const [video_key, setVideo_key] = useState('')
  
   const searchMovieurl = `https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`;
-  const searchTvUrl = `https://api.themoviedb.org/3/tv/${id}?api_key=${api_key}`
+  // const searchTvUrl = `https://api.themoviedb.org/3/tv/${id}?api_key=${api_key}`
   const movieVideoUrl = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${api_key}`
   const [showTrailer, setShowTrailer] = useState(false)
 
